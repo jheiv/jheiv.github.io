@@ -49,7 +49,7 @@ $( function() {
         collapsible: true
     });
     
-    $("textarea#input").val(sample);
+    //$("textarea#input").val(sample);
     
     function debug(s)
     {

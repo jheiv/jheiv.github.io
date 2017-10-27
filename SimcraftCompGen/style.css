@@ -63,3 +63,8 @@ div#status-note
 {
     position: relative;
 }
+
+textarea[name=debug]
+{
+    display: none;
+}
