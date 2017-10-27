@@ -1,0 +1,65 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    zfont-family: 'Open Sans', sans-serif;
+}
+
+textarea {
+    width: 97%;
+    font-family: 'Ubuntu Mono', monospace !important;
+    font-size: 12pt !important;
+}
+
+div.table
+{
+    display:  table;
+    width: auto;
+    background-color: #eee;
+    border:1px solid #666666;
+    border-spacing: 5px;/*cellspacing:poor IE support for  this*/
+   /* border-collapse:separate;*/
+}
+
+div.table div.row
+{
+   display: table-row;
+   width: auto;
+}
+
+div.table div.key, div.table div.val
+{
+    float: left;/*fix for  buggy browsers*/
+    display: table-column;
+    background-color: #ccc;
+}
+
+div.table div.head
+{
+    background-color: #aaa;
+}
+
+div.hr
+{
+    padding: 5px !important;
+    text-transform: capitalize;
+}
+
+div#options
+{
+    display: flex;
+}
+
+div#options .table
+{
+    flex: 0 0 65%;
+}
+
+div#options div#status
+{
+  flex: 1;
+  padding-left:10px;
+}
+
+div#status-note
+{
+    position: relative;
+}

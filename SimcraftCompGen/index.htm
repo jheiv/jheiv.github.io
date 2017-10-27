@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Simcraft Comparison Generator</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Ubuntu+Mono" rel="stylesheet">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+        <script src="json2.js"></script>
+        
+        <link href="style.css" rel="stylesheet">
+        
+        <script src="sample.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h1>SimCraft Comparison Generator</h1>
+        <p>Paste your complete /simc output below, and click parse.</p>
+        <div id="accordion">
+            <h3>Addon Output</h3>
+            <div>
+                <textarea id="input" name="input" rows="20"></textarea><br />
+                <input type="submit" name="parse" value="Parse">
+            </div>
+            <h3>Options</h3>
+            <div id="tab-options">
+                <script id="tmpRow" type="text/x-handlebars-template">
+                    <div class="row">
+                        <input type="checkbox" class="{{class}}" id="{{id}}" name="{{name}}" value="{{value}}" {{check}}>
+                        <label for="{{id}}">{{label}}</label>
+                    </div>
+                </script>
+                <div id="options">
+                    <div class="table"></div>
+                    <div id="status">
+                        <div id="status-note">
+                            Simulations: <span id="status">1</span>
+                            <br /><input type="submit" name="generate" value="Generate">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <h3>Generated SimCraft Script</h3>
+            <div>
+                <textarea name="output" rows="20"></textarea>
+            </div>
+        </div>
+        <p><textarea name="debug" rows="20"></textarea></p>
+    </body>
+</html>
